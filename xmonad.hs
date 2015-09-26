@@ -38,6 +38,7 @@ myManageHook = composeAll
     , className =? "Gpicview" --> doFloat
     , className =? "Heroes of Newerth" --> doShift "7:hon"
     , className =? "Plugin-container" --> doFloat
+    , className =? "VirtualBox" --> doFloat
     , manageDocks ]
 
 main = do  
