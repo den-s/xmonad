@@ -3,16 +3,7 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true"
         , fgColor = "grey"
         , position = Static { xpos = 0 , ypos = 0, width = 1245, height = 16 }
     , commands = [
-          Run MultiCpu [ "--template" , "<autototal>"
-          , "--Low"      , "50"         -- units: %
-          , "--High"     , "85"         -- units: %
-          , "--low"      , "lightblue"
-          , "--normal"   , "darkorange"
-          , "--high"     , "darkred"
-          , "-c"         , " "
-          , "-w"         , "3"
-          ] 10
-        , Run Wireless "wlan0" [ "--template", "<essid> <quality>%"
+        Run Wireless "wlan0" [ "--template", "<essid> <quality>%"
         , "-L","50"
         , "-H","85"
         , "--low", "darkred"
@@ -31,7 +22,7 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true"
         , "-L", "40", "-H", "60"
         , "-l", "lightblue", "-n", "gray90", "-h", "red"
         ] 50
-        , Run Date "%H:%M][%a %b %d.%m.%Y" "date" 10
+        , Run Date "%H:%M][%d.%m.%Y" "date" 10
         , Run Com "/home/den/.xmonad/scripts/volume.sh" [] "volume" 10
         , Run Kbd [("us(dvorak)", "DV"), ("us", "en")]
         , Run StdinReader
